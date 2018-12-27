@@ -14,6 +14,8 @@ class Product:
         self.product_id = self._generate_id(last_product_id)
         print("Product initialized.")
 
+    # Methods for init
+
     def _set_margin(self) -> float:
         return self._round_half_up(float(((self.price.amount - self.cost.amount) / self.price.amount) * 100))
 
@@ -27,7 +29,21 @@ class Product:
     def _generate_id(last_id: int) -> int:
         return last_id + 1
 
+    # helper methods
+
     @staticmethod
     def _round_half_up(n: float, decimals=2):
         multiplier = 10 ** decimals
         return math.floor(n * multiplier + 0.5) / multiplier
+
+    def get_product_details(self) -> str:
+        return "ID: {}\nName: {}\nPrice: {}\nCost: {}\nOn Hand: {}\nMargin: {}%\nProfit: {}\nGross Profit: {}".format(
+            self.product_id,
+            self.name,
+            self.price,
+            self.cost,
+            self.on_hand,
+            self.margin,
+            self.profit,
+            self.gross_profit
+        )

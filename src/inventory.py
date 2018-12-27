@@ -7,4 +7,5 @@ class Inventory:
         print("Inventory initialized.")
 
     def add_existing_product(self, product: Product):
+        print(product.get_product_details())
         self.products.append(product)
