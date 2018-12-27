@@ -1,5 +1,5 @@
-from src.product import Product
-from src.inventory import Inventory
+from product import Product
+from inventory import Inventory
 from money import Money
 
 fake_product = Product("Monster 16oz", 1, Money(2.50, "USD"), Money(1.5, "USD"), 10)
