@@ -2,15 +2,16 @@ from product import Product
 from inventory import Inventory
 from money import Money
 
-fake_product = Product("Monster 16oz", 1, Money(2.50, "USD"), Money(1.5, "USD"), 10)
-print("ID: {}\nName: {}\nPrice: {}\nCost: {}\nOn Hand: {}\nMargin: {}%\nProfit: {}".format(
-    fake_product.product_id,
-    fake_product.name,
-    fake_product.price,
-    fake_product.cost,
-    fake_product.on_hand,
-    fake_product.margin,
-    fake_product.gross_profit
+fake_inventory = Inventory([])
+print(fake_inventory.products)
+fake_inventory.add_existing_product(Product("Monster 16oz", Money(2.50, "USD"), Money(1.29, "USD"), 10))
+print(fake_inventory.products[0])
+print("ID: {}\nName: {}\nPrice: {}\nCost: {}\nOn Hand: {}\nMargin: {}%\nGross Profit: {}".format(
+    fake_inventory.products[0].product_id,
+    fake_inventory.products[0].name,
+    fake_inventory.products[0].price,
+    fake_inventory.products[0].cost,
+    fake_inventory.products[0].on_hand,
+    fake_inventory.products[0].margin,
+    fake_inventory.products[0].gross_profit
 ))
-fake_product_list = [fake_product]
-fake_inventory = Inventory(fake_product_list)
