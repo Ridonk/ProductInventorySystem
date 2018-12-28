@@ -12,7 +12,7 @@ money - `pip install money`
 
 ## Usage
 
-## Roadmap
+## Road Map
 
 ## Credits
 
