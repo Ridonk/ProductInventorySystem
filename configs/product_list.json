@@ -1,0 +1,13 @@
+{
+  "item": [{
+    "name": "Monster 16oz",
+    "price": 2.50,
+    "cost": 1.29,
+    "on_hand": 60
+  },{
+    "name": "Rockstar 16oz",
+    "price": 2.78,
+    "cost": 1.50,
+    "on_hand": 25
+  }]
+}

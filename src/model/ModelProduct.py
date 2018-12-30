@@ -35,15 +35,3 @@ class Product:
     def _round_half_up(n: float, decimals=2):
         multiplier = 10 ** decimals
         return math.floor(n * multiplier + 0.5) / multiplier
-
-    def get_product_details(self) -> str:
-        return "ID: {}\nName: {}\nPrice: {}\nCost: {}\nOn Hand: {}\nMargin: {}%\nProfit: {}\nGross Profit: {}".format(
-            self.product_id,
-            self.name,
-            self.price,
-            self.cost,
-            self.on_hand,
-            self.margin,
-            self.profit,
-            self.gross_profit
-        )
